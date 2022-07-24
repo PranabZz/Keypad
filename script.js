@@ -6,14 +6,11 @@ var str = "";
 var newstr = "";
 var count = 0;
 
-
 //Checks if any key is pressed inside the Documents
 
 document.addEventListener('keydown', (event) => {
   userInput(event.key);
 });
-
-
 
 // Checking what the user has pressed and how many times have they pressed the key
 
@@ -21,7 +18,7 @@ function userInput(n) {
 
   setTimeout(function() {
 
-    if (n != "Enter") {
+    if (n != " ") {
       //For Key 2 pressed
       if (n == 2) {
         count++;
@@ -238,7 +235,11 @@ function userInput(n) {
 
       console.log(count);
     }
-    else if (n == "Enter") {
+
+    //Priting of the word 
+    //We take a newstring and and letter from the above if else condition and concat it to form the word user wants 
+
+    else if (n == " ") {
       count = 0;
       newstr = str + letter;
       str = newstr;
